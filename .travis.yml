@@ -1,11 +1,11 @@
-language: c
+language: f90
 os:
   - linux
   - osx
 notifications:
   email: false
 script:
-  - make -j3
+  - make
 deploy:
   provider: releases
   api_key: "$OATH_TOKEN"
