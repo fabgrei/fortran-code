@@ -4,8 +4,9 @@ os:
   - osx
 notifications:
   email: false
+install:
+    - ./.travis/install.sh
 script:
-  - sudo apt-get install gfortran
   - make
 deploy:
   provider: releases
