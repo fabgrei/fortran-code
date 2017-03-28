@@ -2,6 +2,7 @@ language: c
 os:
   - linux
   - osx
+sudo: required
 notifications:
   email: false
 install:
