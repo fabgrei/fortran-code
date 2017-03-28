@@ -1,10 +1,11 @@
-language: f90
+language: c
 os:
   - linux
   - osx
 notifications:
   email: false
 script:
+  - sudo apt-get install gfortran
   - make
 deploy:
   provider: releases
