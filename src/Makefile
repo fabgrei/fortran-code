@@ -25,9 +25,9 @@ release debug: fortran-code.$(SHLIB_EXT)
 fortran-code.$(SHLIB_EXT): $(XOBJS)
 	rm -rf $@
 ifeq ($(USE_DSFMT),1)
-	$(FC) $(LDFLAGS-add) $(LDFLAGS) -shared -o $@ $^ -L$(DSFMT_libdir) -ldSFMT
+	$(FC) $(fPIC) $(LDFLAGS-add) $(LDFLAGS) -shared -o $@ $^ -L$(DSFMT_libdir) -ldSFMT
 else
-	$(FC) $(LDFLAGS-add) $(LDFLAGS) -shared -o $@ $^
+	$(FC) $(fPIC) $(LDFLAGS-add) $(LDFLAGS) -shared -o $@ $^
 endif
 
 clean:
